@@ -1,10 +1,13 @@
 # chat_app_ui
 
-A new Flutter project.
+Application which is having the CHAT UI, Search Mechanism
 
 ## Getting Started
+<img src="https://github.com/user-attachments/assets/bd5c0858-68a1-49f7-9001-509d088b1df5"  height=400 width=200  />
+<img src="https://github.com/user-attachments/assets/1e1fc4e2-68d1-46b6-a617-c1db3334cdb4"  height=400 width=200 />
+<img src="https://github.com/user-attachments/assets/17f64cfa-8c16-43b0-90be-5cbcb77f56ad"  height=400 width=200 />
+<img src="https://github.com/user-attachments/assets/f2a83aa4-817f-4c84-bb85-eb322c93aa86"  height=400 width=200 />
 
-This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
