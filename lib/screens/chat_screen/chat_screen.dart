@@ -102,26 +102,6 @@ class _ChatScreenState extends State<ChatScreen> {
                                       widget.userList.listChat[index].dateTime,
                                 );
                               }),
-                          // child: ListView(
-                          //   controller: controller,
-                          //   children: [
-                          //     messageFormatting(
-                          //       "Hey how are you",
-                          //       true,
-                          //       context,
-                          //     ),
-                          //     messageFormatting(
-                          //       "ia ma fine",
-                          //       false,
-                          //       context,
-                          //     ),
-                          //     messageFormatting(
-                          //       "how are the things going on? it has been so long we have met each other. i was thinking of calling you up but your phone was unreachable so i dropped the idea",
-                          //       true,
-                          //       context,
-                          //     ),
-                          //   ],
-                          // ),
                         )
                       ],
                     ),

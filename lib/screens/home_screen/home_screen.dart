@@ -1,6 +1,5 @@
 import 'package:chat_app_ui/constants/colors.dart';
 import 'package:chat_app_ui/constants/dummy_message_data.dart';
-import 'package:chat_app_ui/notifier/search_list_change_notifier_provider.dart';
 import 'package:chat_app_ui/screens/home_screen/components/members_list.dart';
 import 'package:chat_app_ui/services/searching.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +15,10 @@ class HomeScreen extends ConsumerStatefulWidget {
 class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    var outlineInputBorder = OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.white),
+      borderRadius: BorderRadius.circular(40),
+    );
     return Scaffold(
       appBar: AppBar(
         backgroundColor: appColors.yellowCol,
@@ -36,22 +39,38 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   child: Row(
                     children: [
                       Flexible(
-                        child: TextFormField(
-                          onChanged: (v) {
-                            searchUsers(v, userList, ref);
-                          },
-                          decoration: InputDecoration(
-                            hintText: "Search Message or Name",
-                            contentPadding:
-                                EdgeInsets.symmetric(horizontal: 16),
-                            border: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.white),
-                                borderRadius: BorderRadius.circular(40)),
-                            suffixIcon: Icon(Icons.search),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey[300]?.withOpacity(0.6) ??
+                                      Colors.red,
+                                  blurRadius: 2,
+                                  spreadRadius: 4)
+                            ],
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(
+                              50,
+                            ),
+                          ),
+                          child: TextFormField(
+                            onChanged: (v) {
+                              searchUsers(v, userList, ref);
+                            },
+                            decoration: InputDecoration(
+                              hintText: "Search Message or Name",
+                              contentPadding:
+                                  EdgeInsets.symmetric(horizontal: 16),
+                              focusedBorder: outlineInputBorder,
+                              enabledBorder: outlineInputBorder,
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white),
+                                  borderRadius: BorderRadius.circular(40)),
+                              suffixIcon: Icon(Icons.search),
+                            ),
                           ),
                         ),
                       ),
-                      //
                     ],
                   ),
                 ),
@@ -72,7 +91,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   ),
                 ),
                 SizedBox(height: 20),
-                MemebersList(),
+                MembersList(),
               ],
             ),
           ],

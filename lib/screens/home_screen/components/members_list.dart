@@ -6,8 +6,8 @@ import 'package:chat_app_ui/screens/home_screen/components/chat_items.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class MemebersList extends ConsumerWidget {
-  const MemebersList({
+class MembersList extends ConsumerWidget {
+  const MembersList({
     super.key,
   });
 
